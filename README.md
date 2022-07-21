@@ -3,4 +3,4 @@ The faro shuffle is a seemingly impossible act of card manipulation, being able 
 
 The paper "Perfect and Semi-Perfect Shuffles" in this repository looks at previously unknown shuffles intimately related to the faro, and the mathematics behind them. I am not yet sure if the new shuffles have applications to algorithms beyond what can be done with regular faros, but they serve as a novel discovery.
 
-Code to simulate the action of the shuffles has been included.
+Code to simulate the action of the shuffles has been included as 'faro.py'..
