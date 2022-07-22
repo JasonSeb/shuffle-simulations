@@ -182,14 +182,17 @@ def shuffle_sequence(faro_list, deck):
 """
 def card_name(card_val, deck_size):
     # If the deck size is inappropriate, we print a warning message and return None
-    if (deck_size>64):
+    if (deck_size > 64):
         print("Card names don't exist for such unreasonably large decks!")
         return None
-    if (deck_size<0):
+    if (deck_size <= 0):
         print("That is not a meaningful deck size.")
         return None
     if (deck_size%4 != 0):
         print("You need a deck that can be divided into four suits.")
+        return None
+    if (card_val >= deck_size or card_val < 0):
+        print("The card value is inappropriate for the given deck size.")
         return None
       
     suit_size = int(deck_size/4)
