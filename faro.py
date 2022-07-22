@@ -186,7 +186,7 @@ def card_name(card_val, deck_size):
         print("Card names don't exist for such unreasonably large decks!")
         return None
     if (deck_size<0):
-        print("That is not a meaningful number of cards.")
+        print("That is not a meaningful deck size.")
         return None
     if (deck_size%4 != 0):
         print("You need a deck that can be divided into four suits.")
