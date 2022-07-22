@@ -178,9 +178,17 @@ def shuffle_sequence(faro_list, deck):
 """ Method to return the name of a card, given its card value and the size of the deck
     In a deck of 52 cards for example, 'card_val=13' would return 'AC' (the Ace of Clubs)
     
-    Deck size must be a multiple of four, and no greater than 64
+    Deck size should be a multiple of four, and no greater than 64
 """
 def card_name(card_val, deck_size):
+    # If the deck size is inappropriate, we print a warning message and return None
+    if (deck_size>64):
+        print("Card names don't exist for such unreasonably large decks!")
+        return None
+    if (deck_size<0):
+        print("That is not a meaningful number of cards.")
+        return None
+      
     suit_size = int(deck_size/4)
     
     values = ['A','2','3','4','5','6','7','8','9','10','J','Q','K','14','15','16']
@@ -199,6 +207,17 @@ def card_name(card_val, deck_size):
 """
 def deck_name(deck):
     deck_size = len(deck)
+
+    # If the deck size is inappropriate, we print a warning message and return None
+    if (deck_size>64):
+        print("Card names don't exist for such unreasonably large decks!")
+        return None
+    if (deck_size<0):
+        print("That is not a meaningful number of cards.")
+        return None
+    if (dexk_size%4 != 0):
+        print("You need a deck that can be divided into four suits.")
+        return None
     
     proper_deck = [None]*deck_size
     
