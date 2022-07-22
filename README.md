@@ -1,6 +1,6 @@
 # shuffle-simulations
 The faro shuffle is a seemingly impossible act of card manipulation, being able to mix up a deck of cards and then return it back to its original order. Beyond card magic the faro is known to have applications to divide-and-conquer algorithms, popping up in implementations of Fast Fourier Transforms, in sorting algorithms and in recursive addition algorithms. (For details, see the papers "Parallel Processing with the Perfect Shuffle" by Stone and "The Mathematics of Perfect Shuffles" by Diaconis, Graham and Kantor.)
 
-The paper "Perfect and Semi-Perfect Shuffles" in this repository looks at previously unknown shuffles intimately related to the faro, and the mathematics behind them. I am not yet sure if the new shuffles have applications to algorithms beyond what can be done with regular faros alone, but they serve as a novel discovery.
+The paper "Perfect and Semi-Perfect Shuffles" in this repository looks at previously unknown shuffles intimately related to the faro, and the mathematics behind them. At a later time I will include a write-up on how these new shuffles might be used in algorithms similar to how the standard faro is used. Currently though, the paper goes over how the shuffles form an algebraic group, describes how the various shuffles move individual cards, and examines how packets of cards can be influenced in a manner that uses the divide-and-conquer approach.
 
 The file 'faro.py' simulates the various shuffles, allowing sequences of shuffles to be applied to a deck of a chosen size.
