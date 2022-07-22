@@ -7,6 +7,18 @@ as outlined in the related paper "Perfect and Semi-Perfect Shuffles"
 
 (It is clearest what is going on when a live card demo is given to accompany the code's simulations)
 
+
+NOTE: Getting the names of the cards will only work for a deck that is 64 or less in length. This is 
+      because card names are a specific labeling convention for real-world playing cards, and decks 
+      never exceed 64 in practice. For arrays larger than 64, 'cards' can be labeled simply with integer 
+      indices rather than by '4C' or 'AH', and the 'deck_name' method would not need to be called.
+      
+      Though the 'in-faro' and 'out-faro' can be applied to decks that are a multiple of 2 in length, 
+      the 'double' and 'straddled' faros can only be applied to decks that are a multiple of 4 in length.
+      This is a natural constraint, as the double and straddled faros can be thought of as applying a 
+      permutation of length 4 to pieces of the deck (see the paper for details). As such, these shuffles 
+      should only be applied to a deck that is a multiple of 4 in length.
+
 """
 
 
@@ -182,7 +194,9 @@ def card_name(card_val, deck_size):
 
 
 
-""" Prints out the name of every card in the deck, in order """
+""" Prints out the name of every card in the deck, in order. 
+    Only callable for deck lengths that are a multiple of 4, and for lengths that are 64 or less 
+"""
 def deck_name(deck):
     deck_size = len(deck)
     
@@ -221,4 +235,4 @@ if __name__=='__main__':
     deck = np.array(range(32))
     shuf_deck = shuffle_sequence([fi,fi,so,fo,di], deck)
     deck_name(shuf_deck)
-
+    
